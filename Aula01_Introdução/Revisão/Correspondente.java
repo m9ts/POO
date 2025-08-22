@@ -9,17 +9,19 @@ Exemplo de execução:
 public class Correspondente {
     public static void main (String [] args) {
         if (args.length == 0) {
-            System.out.println("Digite um número entre 0 e 9");
+            System.out.println("Insira um número entre 0 e 9.");
             return;
+        }
+
         int numero = Integer.parseInt(args[0]);
-        if (numero >= 0 && numero <= 9){
-            String [] palavras  = {
+
+        if (numero >= 0 && numero <= 9) {
+            String[] palavras = {
                 "zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"
-                };
-        };
-        System.out.println(palavras[numero]);
+            };
+            System.out.println(palavras[numero]);
         } else {
-            System.out.println("Cuidado! Insira um número entre 0 e 9")
+            System.out.println("Incorreto! Insira um número entre 0 e 9.");
         }
     }
 }
