@@ -10,3 +10,13 @@ Exemplo de execução:
 • java Ex5 87
 • Saída: B
 */
+
+public class ClassificaNota {
+    public static void main (String[] args) {
+        if (args.length == 0) {
+            System.out.println("Insira um número entre 0 e 100.");
+            return;
+        }
+
+    }
+}

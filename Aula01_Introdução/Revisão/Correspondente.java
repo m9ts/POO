@@ -13,7 +13,7 @@ public class Correspondente {
             return;
         }
 
-        int numero = Integer.parseInt(args[0]);
+        int numero = Integer.parseInt(args[0]); // Converte texto em número para poder usar como índice do array.
 
         if (numero >= 0 && numero <= 9) {
             String[] palavras = {
