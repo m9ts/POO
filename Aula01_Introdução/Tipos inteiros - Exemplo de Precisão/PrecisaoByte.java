@@ -6,3 +6,5 @@ public class PrecisaoByte {
         System.out.println("i: " + i);
     }
 }
+
+// Cast é necessário para conversões de tipos de variáveis.
