@@ -9,7 +9,6 @@ Digite n: 5
 Os primeiros 5 números primos são: 2, 3, 5, 7, 11 
 */
 
-package Exercícios;
 import java.util.Scanner;
 
 public class ex4_Primos {
