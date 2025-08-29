@@ -21,7 +21,6 @@ Os lados formam um triângulo.
 Tipo: Isósceles
 */
 
-package Exercícios;
 import java.util.Scanner;
 
 public class ex3_Triangulo {
