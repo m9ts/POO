@@ -21,6 +21,7 @@ public class ex4_Primos {
         int encontrados = 0;
         int numero = 2;
 
+        System.out.println("Os primeiros " + n + " números primos são: ");
         while (encontrados < n) {
             if (checkPrimo(numero)) {
                 System.out.print(numero + " ");
