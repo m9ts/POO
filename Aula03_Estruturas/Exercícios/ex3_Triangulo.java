@@ -24,13 +24,27 @@ Tipo: Isósceles
 package Exercícios;
 import java.util.Scanner;
 
-public class ex3_TiposTriangulo {
+public class ex3_Triangulo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.err.println("Insira três valores: ");
 
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
 
-
+        if (a + b > c && a + c > b && b + c > a) {
+            System.out.println("Os lados formam um triângulo.");
+            if (a == b && b == c) {
+                System.out.println("Tipo: Equilátero.");
+            } else if (a == b || a == c || b == c) {
+                System.out.println("Tipo: Isósceles.");
+            } else {
+                System.out.println("Tipo: Escaleno.");
+            }
+        } else {
+            System.out.println("Os lados não formam um triângulo!");
+        }
         scanner.close();
     }
 }
