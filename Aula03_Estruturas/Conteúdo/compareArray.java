@@ -1,3 +1,5 @@
+package Conteúdo;
+
 import java.util.Arrays;
 
 public class compareArray {
