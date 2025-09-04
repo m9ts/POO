@@ -7,7 +7,6 @@ Digite um número: 7
 O número 7 é ímpar.
 */
 
-package Exercícios;
 import java.util.Scanner;
 
 public class ex2_ParOuImpar {

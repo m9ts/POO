@@ -10,7 +10,6 @@ no trecho de código daquela categoria. As categorias superiores (com número ma
 os valores acumulados das categorias inferiores
  */
 
- package Exercícios;
 
  public class ex1_VendaAuto {
      public static void main(String[] args) {

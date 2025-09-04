@@ -56,6 +56,7 @@ public class ex7_Matriz {
             }
             System.out.println();
         }
+        scanner.close();
         System.out.println("\nSoma de todos os elementos = " + somaMatriz);
         System.out.println("Soma da diagonal principal = " + somaPrincipal);
         System.out.println("Soma da diagonal secundária = " + somaSecundaria);

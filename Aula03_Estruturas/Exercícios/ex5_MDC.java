@@ -36,6 +36,7 @@ public class ex5_MDC {
             x = y;
             y = resto;
         }
+        scanner.close();
         System.out.println("MDC = " + x);
     }
 }
