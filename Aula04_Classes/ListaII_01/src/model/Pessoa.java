@@ -12,15 +12,15 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public String getNome(String nome) {
+    public String getNome() {
         return nome;
     }
 
-    public int getIdade(int idade){
+    public int getIdade(){
         return idade;
     }
 
     public String exibirDados(){
-        return "Nome: "+getNome(nome) +"\nIdade: " +getIdade(idade) +"\n\nEndereço:\n" +endereco.exibirEndereco(endereco.getRua(), endereco.getBairro(), endereco.getNumero());
+        return "Nome: "+getNome() +"\nIdade: " +getIdade() +"\n\nEndereço:\n" +endereco.exibirEndereco(endereco.getRua(), endereco.getBairro(), endereco.getNumero());
     }
 }
