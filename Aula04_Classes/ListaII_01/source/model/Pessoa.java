@@ -1,5 +1,4 @@
-package ListaII_01.src.model;
-import ListaII_01.src.model.Endereco;
+package model;
 
 public class Pessoa {
     String nome;

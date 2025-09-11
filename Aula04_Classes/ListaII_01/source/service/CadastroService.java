@@ -1,7 +1,7 @@
-package ListaII_01.src.service;
+package service;
 
-import ListaII_01.src.model.Endereco;
-import ListaII_01.src.model.Pessoa;
+import model.Endereco;
+import model.Pessoa;
 
 public class CadastroService {
     private Pessoa pessoa;

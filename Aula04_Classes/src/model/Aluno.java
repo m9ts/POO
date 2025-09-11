@@ -2,7 +2,7 @@ package src.model;
 
 public class Aluno {
         private String nome;
-        private int idade;
+        int idade;
 
         public Aluno() {}
 

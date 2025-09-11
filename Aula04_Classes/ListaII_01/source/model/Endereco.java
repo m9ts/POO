@@ -1,4 +1,4 @@
-package ListaII_01.src.model;
+package model;
 
 public class Endereco {
     String rua;

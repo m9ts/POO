@@ -1,6 +1,4 @@
-package ListaII_01.src;
-
-import ListaII_01.src.service.CadastroService;
+import service.CadastroService;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,6 +6,5 @@ public class Main {
 
         cadastro.cadastrarPessoa("Jubileu", 38, "Rua Marte", "Via Lactea", 1990);
         cadastro.mostrarPessoa();
-        
     }
 }
