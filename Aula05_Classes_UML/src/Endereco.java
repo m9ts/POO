@@ -1,7 +1,6 @@
-import 
 public class Endereco {
     private String rua;
-    private int numero;
+    private String numero;
     private String complemento;
     private String bairro;
     private String cidade;
@@ -9,7 +8,7 @@ public class Endereco {
     private String cep;
     private boolean casa;
 
-    public Endereco(String rua, int numero, String complemento, String bairro, String cidade, String estado, String cep, boolean casa) {
+    public Endereco(String rua, String numero, String complemento, String bairro, String cidade, String estado, String cep, boolean casa) {
         this.rua = rua;
         this.numero = numero;
         this.complemento = complemento;
@@ -22,7 +21,10 @@ public class Endereco {
 
     public String mostrarEndereco() {
         String tipoImovel = casa ? "Casa" : "Apartamento";
-        String enderecoCompleto = rua + " ," + numero + " ," + bairro + " ," + "CEP: " + cep + ", " + tipoImovel;
+        String enderecoCompleto = rua + ", " + numero + " - " + bairro + "| " + "CEP: " + cep + " | " + tipoImovel + " - " + complemento;
+
+        enderecoCompleto += " | " + cidade + "/" + estado;
+        return enderecoCompleto;
     }
 }
 

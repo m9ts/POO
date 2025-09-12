@@ -8,6 +8,6 @@ public class Contato {
     }
 
     public String mostrarContato() {
-        return String.format("Email: %s\n Telefone: %s",email, telefone);
+        return String.format("Email: %s\nTelefone: %s",email, telefone);
     }
 }
