@@ -14,6 +14,15 @@ public class Pessoa {
     }
 
     public String apresentar() {
-        return String.format("");
+        return String.format("Cadastro realizado com sucesso!\n");
     }
+}
+
+public String apresentar() {
+    return "Cadastro realizado com sucesso!\n" +
+            "Nome" + nome + "\n" +
+            "Idade" + idade + " anos\n" +
+            "CPF: " + cpf + "\n" +
+            contato.mostrarContato() + "\n" +
+            "Endereço: " + endereco.mostrarEndereco();
 }
