@@ -1,5 +1,3 @@
-package Aula06_Sobrecarga_Overload;
-
 public class ex1_Geometria {
     public double area(double lado) {
         return lado * lado;
