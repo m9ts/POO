@@ -1,3 +1,13 @@
+/*
+Implemente a classe Produto com construtores
+sobrecarregados:
+1 Construtor vazio (define valores padrão).
+2 Construtor com nome e preço.
+3 Construtor com nome, preço e quantidade.
+• Crie objetos usando cada construtor e mostre os valores
+atribuídos.
+ */
+
 public class ex3_Produto {
     String nome;
     double preco;
