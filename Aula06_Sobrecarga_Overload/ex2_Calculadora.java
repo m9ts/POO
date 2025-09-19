@@ -1,3 +1,13 @@
+/*
+Crie uma classe Calculadora com métodos multiplica
+sobrecarregados:
+1 multiplica(int a, int b).
+2 multiplica(double a, double b).
+3 multiplica(int... valores) usando varargs.
+• Implemente no main testes para ver qual sobrecarga é
+escolhida em cada chamada.
+ */
+
 public class ex2_Calculadora {
     public int multiplica(int a, int b) {
         return a * b;
