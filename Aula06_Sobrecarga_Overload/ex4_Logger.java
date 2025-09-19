@@ -1,3 +1,13 @@
+/*
+Reforce a prática implementando uma classe Logger com
+métodos sobrecarregados:
+1 log(String msg).
+2 log(String msg, int nivel).
+3 log(String msg, String nivel).
+4 log(String msg, String... args).
+• Teste cada versão e explique qual sobrecarga foi chamada.
+ */
+
 public class ex4_Logger {
     public void log (String msg) {
         System.out.println("Log: " + msg);
