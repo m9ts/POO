@@ -1,5 +1,5 @@
 class FiguraGeometrica {
-    public static double Pi = 3.13159;
+    public static double Pi = 3.14159;
 
     public static void saudacao() {
         System.out.println("Boas-vindas!");
