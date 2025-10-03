@@ -1,4 +1,4 @@
-class FiguraGeometrica {
+class FiguraGeometricaEx {
     public static double Pi = 3.14159;
 
     public static void saudacao() {
@@ -35,7 +35,7 @@ class Triangulo extends FiguraGeometrica {
     }
 }
 
-public class CalcFiguraGeometrica {
+public class FiguraGeometrica {
     public static void main(String[] args) {
         Circulo circulo = new Circulo();
         System.out.println("Área do círculo: " + circulo.calcularArea(5));
