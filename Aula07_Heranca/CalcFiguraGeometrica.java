@@ -1,5 +1,5 @@
-class FiguraGeometricaEx {
-    public static double Pi = 3.14159;
+class FiguraGeometrica {
+    public static double Pi = 3.13159;
 
     public static void saudacao() {
         System.out.println("Boas-vindas!");
@@ -35,15 +35,15 @@ class Triangulo extends FiguraGeometrica {
     }
 }
 
-public class FiguraGeometrica {
+public class CalcFiguraGeometrica {
     public static void main(String[] args) {
         Circulo circulo = new Circulo();
-        System.out.println("Área do círculo: " + circulo.calcularArea(5));
+        System.out.println("Area do circulo: " + circulo.calcularArea(5));
 
         Retangulo retangulo = new Retangulo();
-        System.out.println("Área do retângulo: " + retangulo.calcularArea(3, 2));
+        System.out.println("Area do retangulo: " + retangulo.calcularArea(3, 2));
 
         Triangulo triangulo = new Triangulo();
-        System.out.println("Área do triângulo: " + triangulo.calcularArea(3, 2));
+        System.out.println("Area do triangulo: " + triangulo.calcularArea(3, 2));
     }
 }
