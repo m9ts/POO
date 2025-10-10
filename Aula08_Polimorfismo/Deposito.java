@@ -1,5 +1,7 @@
-class Deposito extends Operacao implements Operavel{
+public class Deposito extends Operacao implements Operavel{
 
-    public executarOperacao(){
+    public void executarOperacao(){
+        System.out.println("Realizando deposito...");
+        System.out.println("Valor depositado: R$" + valor);
     }
 }

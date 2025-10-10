@@ -1,5 +1,4 @@
-interface Operavel{
+ public interface Operavel{
 
-    public void executarOperacao(){
-    }
+    void executarOperacao();
 }
