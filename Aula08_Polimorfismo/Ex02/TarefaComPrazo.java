@@ -2,7 +2,7 @@ public class TarefaComPrazo extends Tarefa {
     private String prazo;
 
     public TarefaComPrazo(String descricao, String prazo){
-        super(descricao);
+        super(descricao); // inicializa corretamente o atributo 'descricao' que está na classe superclasse
         this.prazo = prazo;
     }
 
