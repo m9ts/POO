@@ -24,10 +24,11 @@ public class ExercicioMain {
                 ((Executavel) tarefa).executarTarefa();
             }
         }
+
         List<Executavel> executavelList = new ArrayList<>();
-        executavelList.add(new TarefaSimples("null"));
-        executavelList.add(new TarefaComPrazo("null", "null"));
-        executavelList.add(new TarefaRecorrente("null", 0));
+        executavelList.add(new TarefaSimples("Passear com o cachorro"));
+        executavelList.add(new TarefaComPrazo("Realizar a prova II de Java", "06/11/2025"));
+        executavelList.add(new TarefaRecorrente("Estudar", 7));
 
         for (Executavel executavel : executavelList) {
             executavel.executarTarefa();
