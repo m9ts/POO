@@ -14,6 +14,7 @@ public class Main {
 
         for (Evento evento : eventos) {
             evento.exibirResumo();
+            evento.divulgar();
 
             // Verifica se o objeto evento pertence a uma classe que implementa a interface Transmitivel
             // antes de tentar chamar o método transmitir()
