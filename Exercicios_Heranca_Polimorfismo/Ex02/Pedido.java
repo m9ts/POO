@@ -12,6 +12,6 @@ public abstract class Pedido {
     public abstract void resumo();
 
     public double calcularTaxaServico() {
-        return valor * 1.10;
+        return valor * 0.10;
     }
 }

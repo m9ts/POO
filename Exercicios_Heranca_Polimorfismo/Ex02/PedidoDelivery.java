@@ -7,13 +7,13 @@ public class PedidoDelivery extends Pedido implements Entregavel {
     }
 
     @Override
-    public void resumo(){
-        System.out.println("Resumo do(s) pedido(s) delivery: ");
-        System.out.println(String.format("Valor: %.2f\nDescricao: %s", valor, descricao));
+    public void resumo() {
+        System.out.println(String.format("Descrição: %s\nValor: R$ %.2f", descricao, valor));
     }
 
     @Override
-    public void entregar(){
-        System.out.println("Entrega por motoboy.");
+    public void entregar() {
+        System.out.println("Entrega via motoboy.");
     }
+    
 }

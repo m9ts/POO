@@ -1,28 +1,29 @@
 package Exercicios_Heranca_Polimorfismo.Ex02;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Pedido> pedidos = new LinkedList<>();
+        List<Pedido> pedidos = new ArrayList<>();
 
-        pedidos.add(new PedidoDelivery(65.00, "Ultra burger w/ Coke"));
-        pedidos.add(new PedidoLocal(45.00, "Combo double burger cheddar"));
-        pedidos.add(new PedidoRetirada(30.90, "Smash chicken burger"));
+        pedidos.add(new PedidoDelivery(45.50, "Double cheese burger"));
+        pedidos.add(new PedidoRetirada(40.99, "Chicken burger"));
+        pedidos.add(new PedidoLocal(35.00, "Smash cheddar burger"));
 
         for (Pedido pedido : pedidos) {
             pedido.resumo();
 
-            // Verifica se o pedido é do tipo PedidoDelivery para aplicar a taxa de serviço
-            if (pedido instanceof PedidoDelivery) {
-                System.out.println("Valor com taxa: R$" + pedido.calcularTaxaServico());
+            if (pedido instanceof Entregavel) {
+                ((Entregavel) pedido).entregar();
+            } else {
+                System.out.println("Pedido servido na mesa.");
             }
 
-            if (pedido instanceof Entregavel) {
-                ((Entregavel) pedido).entregar(); // Downcasting para chamar o método entregar()
+            if (pedido instanceof PedidoDelivery) {
+                System.out.println("Taxa de serviço: R$ " + pedido.calcularTaxaServico());
             }
-            System.out.println("--------------------------");
+            System.out.println("----------------------------");
         }
     }
 }

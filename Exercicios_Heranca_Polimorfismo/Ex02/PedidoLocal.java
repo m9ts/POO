@@ -7,8 +7,7 @@ public class PedidoLocal extends Pedido {
     }
 
     @Override
-    public void resumo(){
-        System.out.println("Resumo do(s) pedido(s) servido(s) na mesa: ");
-        System.out.println(String.format("Valor: %.2f\nDescricao: %s", valor, descricao));
+    public void resumo() {
+        System.out.println(String.format("Descrição: %s\nValor: R$ %.2f", descricao, valor));
     }
 }
