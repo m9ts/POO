@@ -125,7 +125,7 @@ System.out.println(hospital.getNome());
 
 Qual exceção será lançada? Explique o motivo dessa exceção e como ela poderia ser evitada no código.
 
-***R:**
+**R:**
 
 O objeto hospital está com o valor **null**, portanto, não aponta para nenhum objeto real. Mesmo assim, o código tenta executar **hospital.getNome()** - então o Java tenta acessar um método de algo que não existe na memória. Isso gera uma exceção **NullPointerException**.
 
@@ -203,3 +203,19 @@ class Enfermaria {
     }
 }
 ```
+
+---
+
+d) Explique, com suas palavras, a diferença entre **tratar uma exceção** e **evitá-la**. Dê um exemplo simples usando o contexto hospitalar.
+
+**R:**
+
+**Evitar uma exceção** significa escrever o código de forma que o erro não aconteça, cuidando para que todas as condições necessárias sejam atendidas antes da execução de uma operação. Por exemplo, inicializar corretamente os objetos e garantir que listas ou atributos não estejam nulos.
+
+**Tratar uma exceção** significa lidar com um erro quando ele ocorre, permitindo que o programa continue funcionando sem travar. Isso geralmente é feito usando estruturas como **try-catch** para capturar o erro e executar ações alternativas.
+
+**Exemplo:**
+
+**Evitar exceção:** Garantir que a lista de pacientes (List<Paciente> pacientes) da classe Enfermaria seja inicializada corretamente antes de adicionar pacientes, evitando um **NullPointerException**.
+
+**Tratar exceção:** Usar um bloco **try-catch** ao acessar um paciente por índice na lista, capturando uma possível **IndexOutOfBoundsException** caso o índice não exista, e exibindo uma mensagem de erro ao usuário sem travar o programa.
