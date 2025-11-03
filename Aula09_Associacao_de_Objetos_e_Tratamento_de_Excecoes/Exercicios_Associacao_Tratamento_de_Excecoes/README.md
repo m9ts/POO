@@ -103,3 +103,103 @@ class Medico {
 - A exclusão de um médico não implicaria na exclusão dos pacientes associados.
 - Os pacientes poderiam ser reatribuídos a outros médicos.
 - O médico seria responsável por gerenciar sua lista de pacientes, mas não pelo ciclo de vida deles.
+
+---
+
+### 6. Faça o diagrama de classes.
+
+**R:**
+
+https://tinyurl.com/POO-ex06-lista-associacao
+
+---
+
+### 7. Tratamento de Exceções
+
+a) Considere o código abaixo:
+
+```java
+Hospital hospital = null;
+System.out.println(hospital.getNome());
+```
+
+Qual exceção será lançada? Explique o motivo dessa exceção e como ela poderia ser evitada no código.
+
+***R:**
+
+O objeto hospital está com o valor **null**, portanto, não aponta para nenhum objeto real. Mesmo assim, o código tenta executar **hospital.getNome()** - então o Java tenta acessar um método de algo que não existe na memória. Isso gera uma exceção **NullPointerException**.
+
+**Para evitar:**
+
+Verifique se o objeto não é nulo antes de chamar o método. Veja:
+
+```java
+if (hospital != null) {
+    System.out.println(hospital.getNome());
+}
+```
+
+---
+
+b) Observe o seguinte trecho:
+
+```java
+List<Paciente> pacientes = new ArrayList<>();
+pacientes.add(new Paciente("Maria", null));
+System.out.println(pacientes.get(2).getNome());
+```
+
+Qual exceção pode ocorrer aqui? Em que linha ela acontece e por quê? Mostre como o código poderia ser protegido com um bloco try-catch.
+
+**R:**
+
+Pode ocorrer a exceção **IndexOutOfBoundsException**, na linha 3. A exceção é lançada quando se tenta acessar um índice de um vetor que está fora de seus limites - como em **get(2)** tentando acessar uma posição inexistente, visto que **List<Paciente>** tem somente o elemento **Maria**, que corresponde ao índice 0.
+
+**Usando try-catch:**
+
+```java
+try {
+    List<Paciente> pacientes = new ArrayList<>();
+    pacientes.add(new Paciente("Maria", null));
+    System.out.println(pacientes.get(2).getNome());
+} catch (IndexOutOfBoundsException ex) {
+    System.out.println("Erro ao tentar acessar índice de um vetor que está fora de seus limites: " + ex.getMessage());
+}
+```
+
+---
+
+c) Analise o código abaixo:
+
+```java
+try {
+    Enfermaria enfermaria = new Enfermaria();
+    for (int i = 0; i <= 10; i++) {
+        enfermaria.getPacientes().add(
+            new Paciente("Paciente " + i, new Medico("Dr. João", "Clínico"))
+        );
+    } 
+} catch (Exception e) {
+    System.out.println("Erro: " + e.getMessage());
+}
+```
+
+Que tipo de exceção pode ocorrer aqui? Explique o motivo. Como você poderia evitar essa situação antes que a exceção acontecesse?
+
+**R:**
+
+Caso **pacientes** dentro da classe **Enfermaria** não tenha sido inicializado, chamar o método **add()** irá gerar a exceção **NullPointerException**, porque você estaria tentando chamar um método em um referência que ainda é null.
+
+**Para evitar:**
+
+Basta inicializar a lista dentro da classe.
+
+```java
+class Enfermaria {
+    private List<Paciente> pacientes = new ArrayList<>();
+
+    public List<Paciente> getPacientes() {
+        return pacientes;
+    }
+}
+```
